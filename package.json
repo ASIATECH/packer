@@ -1,0 +1,15 @@
+{
+  "name": "Tpacker",
+  
+  "description": "package builder",
+  
+  "author": "Tod Packer",
+
+  "version": "0.0.1",
+  
+  "dependencies": {
+    "colors": "0.x.x",
+    "node.packer": "1.0.0"
+  }
+
+}

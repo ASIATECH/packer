@@ -1,0 +1,42 @@
+var colors = require('colors')
+var packer = require( 'node.packer' ),
+    src   = 'out/',
+    js_path= src + 'javascripts/',
+    css_path= src + 'styles/';
+
+packer({
+  log : true,
+  type : 'js',
+  minify : true,
+  input : [
+    js_path + 'forms.js',
+    js_path + 'royal.js',
+    js_path + 'general.js'
+
+  ],
+  
+  output : js_path + 'all-'+digest+'.js',
+  callback: function ( err, stdout, stderr ){
+    console.log('finished js build'.green);
+    err && console.log( err );
+  }
+});
+
+packer({
+  log : true,
+  type : 'css',
+  minify : true,
+  input : [
+    css_path + 'light-blue.css',
+    css_path + 'prettyPhoto.css'
+  ],
+  
+  output : css_path + 'all-'+digest+'.css',
+  callback: function ( err, stdout, stderr ){
+    console.log('finished css build'.green);
+    err && console.log( err );
+  }
+});
+
+
+
